@@ -1,0 +1,20 @@
+apiVersion: "acid.zalan.do/v1"
+kind: postgresql
+metadata:
+  name: flop
+spec:
+  teamId: "flop"
+  volume:
+    size: 1Gi
+  numberOfInstances: 1
+  users:
+    flop:  # database owner
+    - superuser
+    - createdb
+    yak_user: []  # role for application yak
+  databases:
+    yak: flop  # dbname: owner
+  preparedDatabases:
+    bar: {}
+  postgresql:
+    version: "15"
