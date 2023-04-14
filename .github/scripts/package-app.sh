@@ -15,6 +15,7 @@ spec:
       chartVersion: 1.9.0
    helmVersion: v3
    useHelmInstall: true
+   weight: 1
 
    # values maps user-provided values with the Helm chart values.yaml file.
    # You can leave the values attribute empty for this procedure.
@@ -56,6 +57,7 @@ spec:
       chartVersion: 0.1.0
    helmVersion: v3
    useHelmInstall: true
+   weight: 2
 
    # values maps user-provided values with the Helm chart values.yaml file.
    # You can leave the values attribute empty for this procedure.
