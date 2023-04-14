@@ -20,6 +20,8 @@ jobs:
     - name: Get branch name
       run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
       id: get_branch
+    - name: Create Helm Charts
+      run: chmod +x ./.github/scripts/package-app.sh; ./.github/scripts/package-app.sh
     - name: Create a release on Channel associated with the branch
       uses: docker://replicated/vendor-cli:latest
       with:
